@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saurabh Raj Singh | Data Science & AI Developer</title>
+    <meta name="description" content="Portfolio of Saurabh Raj Singh — B.Tech Data Science student, hackathon winner, and AI developer specializing in full-stack development, FinTech, and data-driven platforms.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Cursor glow effect -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Particle canvas -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>Saurabh<span class="logo-bracket"> /&gt;</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#hero" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <a href="https://www.linkedin.com/in/saurabh-raj-singh-302b55272" target="_blank" class="nav-resume-btn">
+                <span>Resume</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V7.8H7.8"/></svg>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg-grid"></div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-tag">
+                    <span class="tag-dot"></span>
+                    <span>Google Student Ambassador 2025</span>
+                </div>
+                <div class="hero-greeting reveal-text">Hello, I'm</div>
+                <h1 class="hero-name" id="heroName">
+                    <span class="name-line name-highlight">
+                        <span class="reveal-text">Saurabh Raj Singh.</span>
+                    </span>
+                </h1>
+                <p class="hero-subtitle">
+                    <span class="subtitle-word">DATA SCIENCE</span>
+                    <span class="subtitle-divider"></span>
+                    <span class="subtitle-word">AI ENGINEER</span>
+                </p>
+                <p class="hero-description">
+                    B.Tech Data Science student & hackathon winner with a passion for AI-based systems, full-stack development, and building real-world applications in FinTech and data-driven platforms.
+                </p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary" id="heroCtaPrimary">
+                        <span>View My Work</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V7.8H7.8"/></svg>
+                    </a>
+                    <a href="#contact" class="btn btn-outline" id="heroCtaSecondary">
+                        <span>Let's Talk</span>
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="10">0</span><span class="stat-plus">+</span>
+                        <span class="stat-label">Hackathons</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="5">0</span><span class="stat-plus">+</span>
+                        <span class="stat-label">Projects Built</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="3">0</span><span class="stat-plus">+</span>
+                        <span class="stat-label">Certifications</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image-wrapper">
+                <div class="hero-image-glow"></div>
+                <div class="hero-image-ring"></div>
+                <div class="hero-image-ring hero-image-ring-2"></div>
+                <div class="hero-image">
+                    <img src="profile.jpg" alt="Saurabh Raj Singh" id="heroPhoto">
+                </div>
+                <div class="hero-floating-badge badge-1">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                    <span>Full Stack</span>
+                </div>
+                <div class="hero-floating-badge badge-2">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+                    <span>AI / ML</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+            <span>Scroll Down</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">01</span>
+                <h2 class="section-title">
+                    <span class="title-reveal">About Me</span>
+                </h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p class="about-intro">
+                        I'm a passionate <span class="text-highlight">Data Science & AI Developer</span> who loves turning complex data into meaningful, functional products.
+                    </p>
+                    <p class="about-body">
+                        With strong exposure to national and global hackathons across IIMs, IITs, and EY, I bring a competitive edge and hands-on experience in building real-world applications. I specialize in AI-based systems, problem-solving, and full-stack development with a focus on FinTech and data-driven platforms.
+                    </p>
+                    <p class="about-body">
+                        When I'm not coding, you'll find me competing in hackathons, exploring new AI technologies, or contributing to innovative projects that make a real-world impact.
+                    </p>
+                    <div class="about-info-grid">
+                        <div class="info-item">
+                            <span class="info-label">Name</span>
+                            <span class="info-value">Saurabh Raj Singh</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Email</span>
+                            <span class="info-value">saurabh.300012824049@csvtu.ac.in</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Location</span>
+                            <span class="info-value">Bhilai, Chhattisgarh</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Education</span>
+                            <span class="info-value">B.Tech Data Science (Hons)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-skills">
+                    <h3 class="skills-title">Tech Stack</h3>
+                    <div class="skills-grid">
+                        <div class="skill-card" data-skill="Python">
+                            <div class="skill-icon">🐍</div>
+                            <span>Python</span>
+                        </div>
+                        <div class="skill-card" data-skill="Java">
+                            <div class="skill-icon">☕</div>
+                            <span>Java</span>
+                        </div>
+                        <div class="skill-card" data-skill="React.js">
+                            <div class="skill-icon">⚛️</div>
+                            <span>React.js</span>
+                        </div>
+                        <div class="skill-card" data-skill="FastAPI">
+                            <div class="skill-icon">⚡</div>
+                            <span>FastAPI</span>
+                        </div>
+                        <div class="skill-card" data-skill="C/C++">
+                            <div class="skill-icon">💻</div>
+                            <span>C / C++</span>
+                        </div>
+                        <div class="skill-card" data-skill="Supabase">
+                            <div class="skill-icon">🟢</div>
+                            <span>Supabase</span>
+                        </div>
+                        <div class="skill-card" data-skill="AI/ML">
+                            <div class="skill-icon">🤖</div>
+                            <span>AI / ML</span>
+                        </div>
+                        <div class="skill-card" data-skill="Data Analysis">
+                            <div class="skill-icon">📊</div>
+                            <span>Data Analysis</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">02</span>
+                <h2 class="section-title">
+                    <span class="title-reveal">What I Do</span>
+                </h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="services-grid">
+                <div class="service-card" id="service1">
+                    <div class="service-number">01</div>
+                    <div class="service-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                    </div>
+                    <h3>AI & ML Development</h3>
+                    <p>Building intelligent systems with NLP, voice AI, data pipelines, and machine learning models. Specializing in conversational AI and data-driven platforms.</p>
+                    <div class="service-tags">
+                        <span>Python</span>
+                        <span>NLP</span>
+                        <span>FastAPI</span>
+                    </div>
+                </div>
+                <div class="service-card" id="service2">
+                    <div class="service-number">02</div>
+                    <div class="service-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                    </div>
+                    <h3>Full Stack Development</h3>
+                    <p>Crafting end-to-end web applications with modern frameworks. From responsive frontends to robust backend APIs and database architecture.</p>
+                    <div class="service-tags">
+                        <span>React.js</span>
+                        <span>FastAPI</span>
+                        <span>Supabase</span>
+                    </div>
+                </div>
+                <div class="service-card" id="service3">
+                    <div class="service-number">03</div>
+                    <div class="service-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+                    </div>
+                    <h3>FinTech Solutions</h3>
+                    <p>Developing AI-driven financial systems including fraud detection, loan automation, and secure banking algorithms with high accuracy.</p>
+                    <div class="service-tags">
+                        <span>BFS Algorithms</span>
+                        <span>Security</span>
+                        <span>Python</span>
+                    </div>
+                </div>
+                <div class="service-card" id="service4">
+                    <div class="service-number">04</div>
+                    <div class="service-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                    </div>
+                    <h3>Data Analysis & Pipelines</h3>
+                    <p>Designing large-scale data processing pipelines, visualization tools, and analytical systems that transform raw data into actionable insights.</p>
+                    <div class="service-tags">
+                        <span>NetCDF</span>
+                        <span>Data Viz</span>
+                        <span>Analytics</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section class="experience" id="experience">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">03</span>
+                <h2 class="section-title">
+                    <span class="title-reveal">Achievements</span>
+                </h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item" id="exp1">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>🏆 Winner — Hackathon at IIIT Delhi ESYA 2025</h3>
+                                <span class="timeline-company">IIIT Delhi</span>
+                            </div>
+                            <span class="timeline-date">2025</span>
+                        </div>
+                        <p>Won the prestigious hackathon at IIIT Delhi's annual tech fest ESYA, competing against top engineering talent from across India.</p>
+                        <div class="timeline-tags">
+                            <span>Winner</span>
+                            <span>IIIT Delhi</span>
+                            <span>Innovation</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item" id="exp2">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>🌟 Google Student Ambassador 2025</h3>
+                                <span class="timeline-company">Google</span>
+                            </div>
+                            <span class="timeline-date">2025</span>
+                        </div>
+                        <p>Selected as Google Student Ambassador, representing Google's developer ecosystem and mentoring fellow students in technology adoption.</p>
+                        <div class="timeline-tags">
+                            <span>Google</span>
+                            <span>Leadership</span>
+                            <span>Community</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item" id="exp3">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>🥈 Semi-Finalist — EY Hackathon</h3>
+                                <span class="timeline-company">Ernst & Young</span>
+                            </div>
+                            <span class="timeline-date">2025</span>
+                        </div>
+                        <p>Reached the semi-finals of the EY global hackathon, showcasing innovative solutions in technology and business strategy.</p>
+                        <div class="timeline-tags">
+                            <span>EY</span>
+                            <span>Semi-Finalist</span>
+                            <span>Global</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item" id="exp4">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>🎯 Product Management & Agentic AI — IIT Patna</h3>
+                                <span class="timeline-company">Vishlesan i-Hub, IIT Patna</span>
+                            </div>
+                            <span class="timeline-date">2024 - 2025</span>
+                        </div>
+                        <p>Certified in Product Management and Agentic AI from IIT Patna's Vishlesan i-Hub, combining business strategy with cutting-edge AI skills.</p>
+                        <div class="timeline-tags">
+                            <span>IIT Patna</span>
+                            <span>Agentic AI</span>
+                            <span>Product Mgmt</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item" id="exp5">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>🏅 National & Global Competitions</h3>
+                                <span class="timeline-company">IIM Indore, IIT Guwahati & More</span>
+                            </div>
+                            <span class="timeline-date">2024 - 2025</span>
+                        </div>
+                        <p>Competed in prestigious competitions: Avant Garde (IIM Indore), Headhunter (IIM Indore), Prodyssey (IIM Indore), ProduScope 2025 (IIT Guwahati), STPI × IIT Guwahati, and IBM Z Datathon 2025.</p>
+                        <div class="timeline-tags">
+                            <span>IIM</span>
+                            <span>IIT</span>
+                            <span>IBM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">04</span>
+                <h2 class="section-title">
+                    <span class="title-reveal">Projects</span>
+                </h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card project-card-large" id="project1">
+                    <div class="project-image">
+                        <div class="project-image-placeholder" style="background: linear-gradient(135deg, #0ea5e9 0%, #6366f1 50%, #8b5cf6 100%);">
+                            <div class="project-placeholder-icon">
+                                <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="1.5"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="7.5 4.21 12 6.81 16.5 4.21"/><polyline points="7.5 19.79 7.5 14.6 3 12"/><polyline points="21 12 16.5 14.6 16.5 19.79"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+                            </div>
+                            <span>FloatChat</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-meta">
+                            <span class="project-category">AI Platform</span>
+                            <span class="project-year">2024</span>
+                        </div>
+                        <h3>FloatChat — AI-Powered ARGO Ocean Data Platform</h3>
+                        <p>Built an AI-powered conversational platform to query and visualize oceanographic data. Features multi-language voice AI supporting 11+ languages, data pipeline (NetCDF → Supabase) for large-scale data processing, and 85%+ query accuracy.</p>
+                        <div class="project-tech">
+                            <span>React.js</span>
+                            <span>FastAPI</span>
+                            <span>Supabase</span>
+                            <span>NLP</span>
+                            <span>NetCDF</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/saurabhSRajput" target="_blank" class="project-link" aria-label="View source code">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+                                <span>GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" id="project2">
+                    <div class="project-image">
+                        <div class="project-image-placeholder" style="background: linear-gradient(135deg, #f43f5e 0%, #ec4899 50%, #a855f7 100%);">
+                            <div class="project-placeholder-icon">
+                                <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="1.5"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/><path d="M6 15h.01"/><path d="M10 15h4"/></svg>
+                            </div>
+                            <span>Banking AI</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-meta">
+                            <span class="project-category">FinTech</span>
+                            <span class="project-year">2024</span>
+                        </div>
+                        <h3>AI-Based Banking & Loan Security System</h3>
+                        <p>AI-driven loan approval automation and fraud detection system. Implemented BFS-based algorithms for secure transaction and anomaly detection with 85%+ accuracy.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>C++</span>
+                            <span>BFS</span>
+                            <span>FinTech</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/saurabhSRajput" target="_blank" class="project-link" aria-label="View source code">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+                                <span>GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card" id="project3">
+                    <div class="project-image">
+                        <div class="project-image-placeholder" style="background: linear-gradient(135deg, #14b8a6 0%, #0ea5e9 50%, #6366f1 100%);">
+                            <div class="project-placeholder-icon">
+                                <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="1.5"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
+                            </div>
+                            <span>More Projects</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-meta">
+                            <span class="project-category">Coming Soon</span>
+                            <span class="project-year">2025</span>
+                        </div>
+                        <h3>More Innovative Projects</h3>
+                        <p>Currently working on exciting new projects in AI, data science, and product development. Stay tuned for updates!</p>
+                        <div class="project-tech">
+                            <span>AI</span>
+                            <span>Data Science</span>
+                            <span>Innovation</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/saurabhSRajput" target="_blank" class="project-link" aria-label="View GitHub profile">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+                                <span>GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="testimonials" id="education">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">05</span>
+                <h2 class="section-title">
+                    <span class="title-reveal">Education</span>
+                </h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card" id="edu1">
+                    <div class="testimonial-quote">🎓</div>
+                    <p>Bachelor of Technology in Data Science with Honours — Currently pursuing B.Tech with a focus on AI, machine learning, and data-driven systems.</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar" style="background: linear-gradient(135deg, #6366f1, #8b5cf6);">C</div>
+                        <div>
+                            <h4>CSVTU, Bhilai</h4>
+                            <span>2024 - 2028 (Pursuing)</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-stars">
+                        <span class="edu-badge">B.Tech Data Science</span>
+                    </div>
+                </div>
+                <div class="testimonial-card" id="edu2">
+                    <div class="testimonial-quote">📜</div>
+                    <p>Product Management & Agentic AI certification from IIT Patna's Vishlesan i-Hub. Combining business strategy with cutting-edge AI capabilities.</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar" style="background: linear-gradient(135deg, #0ea5e9, #6366f1);">I</div>
+                        <div>
+                            <h4>IIT Patna — Vishlesan i-Hub</h4>
+                            <span>Certification</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-stars">
+                        <span class="edu-badge">Agentic AI</span>
+                    </div>
+                </div>
+                <div class="testimonial-card" id="edu3">
+                    <div class="testimonial-quote">🏫</div>
+                    <p>Completed Class 12th and 10th from Uttar Pradesh board with strong academic foundation in science and mathematics.</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar" style="background: linear-gradient(135deg, #14b8a6, #0ea5e9);">U</div>
+                        <div>
+                            <h4>Uttar Pradesh Board</h4>
+                            <span>2021 & 2024</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-stars">
+                        <span class="edu-badge">12th & 10th</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">06</span>
+                <h2 class="section-title">
+                    <span class="title-reveal">Get In Touch</span>
+                </h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Let's create something <span class="text-highlight">amazing</span> together.</h3>
+                    <p>I'm always open to collaborations, hackathon partnerships, freelance projects, or just a friendly chat about AI and technology.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            </div>
+                            <div>
+                                <span class="contact-label">Email</span>
+                                <a href="mailto:saurabh.300012824049@csvtu.ac.in">saurabh.300012824049@csvtu.ac.in</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                            </div>
+                            <div>
+                                <span class="contact-label">Phone</span>
+                                <a href="tel:+917388376242">+91 7388376242</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            </div>
+                            <div>
+                                <span class="contact-label">Location</span>
+                                <span>Bhilai, Chhattisgarh, India</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/saurabhSRajput" target="_blank" class="social-link" aria-label="GitHub" id="socialGithub">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+                        </a>
+                        <a href="https://www.linkedin.com/in/saurabh-raj-singh-302b55272" target="_blank" class="social-link" aria-label="LinkedIn" id="socialLinkedin">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                        </a>
+                        <a href="mailto:saurabh.300012824049@csvtu.ac.in" class="social-link" aria-label="Email" id="socialEmail">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="formName" placeholder=" " required>
+                        <label for="formName">Your Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="formEmail" placeholder=" " required>
+                        <label for="formEmail">Your Email</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="formSubject" placeholder=" ">
+                        <label for="formSubject">Subject</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="formMessage" rows="5" placeholder=" " required></textarea>
+                        <label for="formMessage">Message</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full" id="formSubmit">
+                        <span>Send Message</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <a href="#hero" class="footer-logo">
+                    <span class="logo-bracket">&lt;</span>Saurabh<span class="logo-bracket"> /&gt;</span>
+                </a>
+                <p>Crafted with ❤️ and lots of ☕</p>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2025 Saurabh Raj Singh. All rights reserved.</span>
+                <a href="#hero" class="back-to-top" id="backToTop">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
